@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+
+<title></title>
+
+<meta charset="utf-8">
+
+<script language="JavaScript">
+
+    function Monqcm(reponses)
+    {
+        var score = 0;
+        var num_choix = document.querySelectorAll('input[type="checkbox"]').length;
+        for (var i = 1; i <= num_choix; i++){
+            if (document.getElementById('choix'+i).checked){
+                if (reponses.includes(i)){
+                    score += 5;
+                }else{
+                    score -= 5;
+                }
+            }
+        }
+        if (score < 0){
+            score = 0;
+        }
+        alert("Votre score est " + score);
+    }
+
+
+</script>
+</head>
+<body>
+
+<form name="mon_form">
+
+<center> <h2>TP QCM JavaScript</h2> </center>
+
+<hr><p><b>Question 1/5 : </b> <br></p></hr>
+
+<p><i>Barème : bonne réponse 2 points, mauvaise réponse -0,5 point, je ne sais pas 0 point</i> <br></p>
+
+<p>Le régime permanent dépend-il des conditions initiales ?<br></p>
+    
+<input id="choix1" type="checkbox"/>
+
+<label for="choix1"> A) oui </label><br>
+
+<input id="choix2" type="checkbox"/> 
+
+<label for="choix2">B) non </label><br>
+
+<input id="choix3" type="checkbox"/> 
+
+<label for="choix3">C) oui, si les conditions initiales sont nulles </label>
+
+<hr><p><br><b>Question 2/5 : </b> Système du premier ordre<br></p> </hr>
+
+<p><i>Barème : bonne réponse 2 points, mauvaise réponse -0,5 point, je ne sais pas 0 point</i><br></p>
+
+<br>&#964; désigne la constante de temps.<br>
+
+<p>Le temps de réponse à 1 % d'un système du premier ordre est égal à environ :<br><br></p>
+
+<input id="choix4" type="checkbox"/>
+
+<label for="choix4">A) 5&#964; </label><br>
+
+<input id="choix5" type="checkbox"/>
+
+<label for="choix5">B) &#964; </label><br>
+
+<input id="choix6" type="checkbox"/> 
+
+<label for="choix6">C) 3&#964; </label><br></p>
+
+<p><br><b>Question 3/5 : </b> Système du deuxième ordre<br></p>
+
+<p>
+<i>Barème : bonne réponse 2 points, mauvaise réponse -0,5 point, je ne sais pas 0 point</i><br><br>
+
+<input id="choix7" type="checkbox"/>
+
+<label for="choix7">A) 16 % </label><br>
+
+<input id="choix8" type="checkbox"/> 
+
+<label for="choix8">B) 60 % </label><br>
+
+<input id="choix9" type="checkbox"/> 
+
+<label for="choix9">C) 6 % </label><br><br>
+
+</p>
+
+<hr><p><br><b>Question 4/5 : </b> <br></p></hr>
+
+<p>
+
+<i>Barème : bonne réponse 2 points, mauvaise réponse -0,5 point, je ne sais pas 0 point</i><br><br>
+
+<br>La solution particulière de l'équation avec second membre correspond à&nbsp;la valeur de la grandeur de sortie à :<br><br>
+
+</p>
+
+<p>
+
+<input id="choix10" type="checkbox"/> 
+
+<label for="choix10">A) t = 0 </label><br>
+
+<input id="choix11" type="checkbox"/> 
+
+<label for="choix11">B) t =  &#8734; </label><br>
+
+<input id="choix12" type="checkbox"/>
+
+<label for="choix12">C) t =  &#964; </label><br><br>
+
+</p>
+
+<hr><p><br><b>Question 5/5 : </b> Système du deuxième ordre<br></p> </hr>
+
+<p>
+
+<i>Barème : bonne réponse 2 points, mauvaise réponse -0,5 point, je ne sais pas 0 point</i><br>
+
+<br>Le signal en entrée est un échelon :<br>x(t) = 0 pour t &lt; 0<br>
+
+x(t) = 1  pour t &gt; 0<br>En sortie, en régime permanent, on a :<br><br>
+
+</p>
+
+<p>
+
+<input id="choix13" type="checkbox"/> 
+
+<label for="choix13">A) y(&#8734;) =  &#8734; </label><br>
+
+<input id="choix14" type="checkbox"/>
+
+<label for="choix14">B) y(&#8734;) = 1 </label>
+
+<br><input id="choix15" type="checkbox"/> 
+
+<label for="choix15">C) y(&#8734;) = 0 </label>
+
+<br><br>
+</p>
+
+<hr><p><br><b>Question 6/5 : </b> <br></p></hr>
+
+<p>
+
+<i>Barème : bonne réponse 2 points, mauvaise réponse -0,5 point, je ne sais pas 0 point</i><br><br>
+
+<br>qui est Mikassa Ackerman ?<br><br>
+
+</p>
+
+<p>
+
+<input id="choix16" type="checkbox"/> 
+
+<label for="choix16">A) Une fille </label><br>
+
+<input id="choix17" type="checkbox"/> 
+
+<label for="choix17">B) Un garçon</label><br>
+
+<input id="choix18" type="checkbox"/>
+
+<label for="choix18">C) une actrice </label><br><br>
+
+</p>
+
+<input id="id_result" value="RESULTAT" type="button" onclick="Monqcm([1, 5, 7, 12, 14, 16])"/>
+
+</form>
+
+</body>
+</html>

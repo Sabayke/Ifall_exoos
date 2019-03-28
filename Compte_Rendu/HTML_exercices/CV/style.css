@@ -1,0 +1,22 @@
+head
+{
+	background-image: url("carbo.png");
+}
+body
+{
+	
+	background-image :url("fifi.jpg");
+	b {color : green; text-align: center;}
+	table, tr, td, th { border : 2px; color: gray;}
+	hr {
+		width: 60%; size:1px;
+	}
+}
+
+	h3,h5,h4,h2,h1 {
+		font-family: italic;
+		font-style: Arial;
+		font-weight: bold;
+		font-size: 100%;
+		} 
+		

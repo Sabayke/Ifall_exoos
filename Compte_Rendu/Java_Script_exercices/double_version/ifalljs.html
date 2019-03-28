@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Double</title>
+<marquee>
+<h3>Bienvenu </h3>
+</marquee>
+<script language="JavaScript">
+function multiplier()
+{
+    document.getElementById("resulfinal").value = document.getElementById("valinit").value * 2;
+if(document.getElementById("resulfinal").value ==0)
+		{
+			alert("Le double donne zero");
+		}
+else if(document.getElementById("resulfinal").value >0)
+		{	
+			alert("Le double donne un resultat positive ");	
+		}
+else		
+			alert("Le double donne un resultat négatif");
+}
+</script>
+</head>
+<body>
+
+<center>
+<form name="mon_form">
+<input type="text" id="valinit" placeholder="Veuillez saisir un nombre"/>
+<input type="button" value="go" onclick="multiplier()"/>
+<input type="text" id="resulfinal" placeholder="Le resultat"/>
+</form>
+</center>
+
+</body>
+</html>
